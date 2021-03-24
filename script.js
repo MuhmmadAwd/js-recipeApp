@@ -53,7 +53,7 @@ function addMeal(mealData, random = false) {
             ${
                 random
                     ? `
-            <span class="random"> Random Recipe </span>`
+            <span class="random"> Random Recipe<br>click the img </span>`
                     : ""
             }
             <img
