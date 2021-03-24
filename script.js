@@ -1,4 +1,7 @@
 const mealsEl = document.getElementById("meals");
+const myRecipe = document.getElementById("myRecipe");
+
+
 const favoriteContainer = document.getElementById("fav-meals");
 const mealPopup = document.getElementById("meal-popup");
 const mealInfoEl = document.getElementById("meal-info");
@@ -47,13 +50,13 @@ function addMeal(mealData, random = false) {
 
     const meal = document.createElement("div");
     meal.classList.add("meal");
-
+    myRecipe.style.backgroundImage=`url(${mealData.strMealThumb})`
     meal.innerHTML = `
         <div class="meal-header">
             ${
                 random
                     ? `
-            <span class="random"> Random Recipe<br>click the img </span>`
+            <span class="random"> Random Recipe<br>click to desc </span>`
                     : ""
             }
             <img
